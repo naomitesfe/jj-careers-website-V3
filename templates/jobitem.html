@@ -1,0 +1,32 @@
+<style>
+.job-posting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #808080;
+  padding: 8px;
+}
+.apply-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<div class="job-posting" style="margin-bottom:16px">
+    <div>
+        <h4 style="color:rgb(120,120,120); margin-bottom:4px;padding-bottom:4px">{{job['title']}}</h4>
+        <div><b>Location:</b> {{job['location']}}</div>
+        {% if 'salary' in job %}
+        <div><b>Salary:</b> {{job['salary']}}</div>
+        {% endif %}
+    </div>
+  <button class="btn btn-outline-primary">Apply</button>
+
+</div>
+
+ 
